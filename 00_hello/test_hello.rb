@@ -37,11 +37,14 @@ class TestHello < MiniTest::Test
 # But hold on there cowboy, we got another test right in front of us now.
 
   def test_says_hello_to_someone
-    assert_equal "Hello, Alice!", greet("Alice")
+    name = "Alice"
+    assert_equal "Hello, #{name}", greet(name)
   end
 
+
   def test_says_hello_to_someone_else
-    assert_equal "Hello, Bob!", greet("Bob")
+    name = "Bob"
+    assert_equal "Hello, #{name}", greet(name)
   end
 
   # These two tests are saying there should be a method named greet
